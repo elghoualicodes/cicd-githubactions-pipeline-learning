@@ -15,4 +15,12 @@ describe('App Tests', () => {
     expect(response.status).toBe(200);
     expect(response.body.status).toBe('healthy');
   });
+
+  test('GET /version should return version info', async () => {
+    const response = await request(app).get('/version');
+    expect(response.status).toBe(200);
+    expect(response.body.version).toBe('1.0.0');
+    expect(response.body.buildDate).toBeDefined();
+    expect(response.body.nodeVersion).toBeDefined();
+  });
 });
