@@ -1,11 +1,13 @@
 name: CI/CD Pipeline
 
 # Trigger the workflow
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
+on: workflow_dispatch
+
+#on:
+ # push:
+  #  branches: [ main, develop ]
+ # pull_request:
+  #  branches: [ main ]
 
 # Environment variables
 env:
